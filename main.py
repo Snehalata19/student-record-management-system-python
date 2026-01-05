@@ -54,6 +54,7 @@ while True:
                 reader=csv.reader(file)
                 for row in reader:
                     if row and row[0]==roll_no:
+                        grade = calculate_grade(int(row[2]))
                         print("\n Student Found!!")
                         print(f"Roll:{row[0]},Name:{row[1]},Marks:{row[2]},Grade:{grade}")
                         found=True
